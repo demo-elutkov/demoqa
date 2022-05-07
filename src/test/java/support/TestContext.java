@@ -24,7 +24,7 @@ public class TestContext {
     }
 
     public static void initialize() {
-        initialize(BROWSER_JENKINS, "local", true);
+        initialize(BROWSER_JENKINS, "local", false);
     }
 
     public static void teardown() {
