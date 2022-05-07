@@ -38,6 +38,7 @@ public class TestContext {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     Map<String, Object> chromePreferences = new HashMap<>();
+                    chromePreferences.put("--no-sandbox");    
                     chromePreferences.put("profile.default_content_settings.geolocation", 2);
                     chromePreferences.put("profile.default_content_settings.popups", 0);
                     chromePreferences.put("download.prompt_for_download", false);
