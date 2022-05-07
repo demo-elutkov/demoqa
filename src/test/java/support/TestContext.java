@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TestContext {
+    public static final String BROWSER_JENKINS =System.getProperty("browser");
 
     private static WebDriver driver;
 
@@ -23,7 +24,7 @@ public class TestContext {
     }
 
     public static void initialize() {
-        initialize("chrome", "local", false);
+        initialize(BROWSER_JENKINS, "local", false);
     }
 
     public static void teardown() {
