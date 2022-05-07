@@ -65,7 +65,7 @@ public class TestContext {
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    firefoxOptions.addArguments("--display=10");
+                    firefoxOptions.addArguments("--display=99.0");
                     if (isHeadless) {
                         FirefoxBinary firefoxBinary = new FirefoxBinary();
                         firefoxBinary.addCommandLineOptions("--headless");
