@@ -36,6 +36,9 @@
                     <includes>
                         <include>**/*.class</include>
                     </includes>
+                    <systemPropertyVariables>
+                        <browser>${browser}</browser>
+                    </systemPropertyVariables>     
                 </configuration>
                 <dependencies>
                     <dependency>
