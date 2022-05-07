@@ -38,7 +38,6 @@ public class TestContext {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     Map<String, Object> chromePreferences = new HashMap<>();
-                    chromePreferences.put("--no-sandbox");    
                     chromePreferences.put("profile.default_content_settings.geolocation", 2);
                     chromePreferences.put("profile.default_content_settings.popups", 0);
                     chromePreferences.put("download.prompt_for_download", false);
@@ -51,6 +50,7 @@ public class TestContext {
                     chromePreferences.put("password_manager_enabled", false);
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("--start-maximized");
+                    chromeOptions.addArguments("--no-sandbox");
                     chromeOptions.setExperimentalOption("prefs", chromePreferences);
                     System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
                     if (isHeadless) {
